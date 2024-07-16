@@ -3,11 +3,11 @@ import Quote from './Quote';
 import Author from './Author';
 import Buttons from './Buttons';
 
-const QuoteBox = ({ quote, author, fetchQuote, textColor }) => (
-  <div id="quote-box" className="p-5 bg-light rounded shadow text-center" style={{ backgroundColor: '#ffffff', color: textColor }}>
+const QuoteBox = ({ quote, author, fetchQuote, textColor, bgColor }) => (
+  <div id="quote-box" className="card" style={{ backgroundColor: textColor, color: bgColor }}>
     <Quote text={quote} />
     <Author author={author} />
-    <Buttons fetchQuote={fetchQuote} quote={quote} author={author} textColor={textColor} />
+    <Buttons fetchQuote={fetchQuote} quote={quote} author={author} textColor={bgColor} bgColor={textColor} />
   </div>
 );
 
