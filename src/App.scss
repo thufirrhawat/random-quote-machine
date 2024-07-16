@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#quote-box {
+  max-width: 600px;
+  width: 90%;
+  margin: 20px;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #quote-box {
+    max-width: 90%;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .quote-author {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #quote-box {
+    max-width: 100%;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  .quote-author {
+    font-size: 0.8rem;
+  }
+}
