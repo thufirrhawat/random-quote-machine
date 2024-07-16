@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSyncAlt, faTwitter } from '@fortawesome/free-solid-svg-icons'; // Changed to use faTwitter
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import QuoteBox from './QuoteBox';
 import './App.scss';
 
-
+// Add the font awesome icons to the library
 library.add(faSyncAlt, faTwitter);
 
 const colors = [
@@ -45,7 +46,7 @@ function App() {
     let R = (num >> 16) + amt;
     let G = (num >> 8 & 0x00FF) + amt;
     let B = (num & 0x0000FF) + amt;
-
+ 
     return "#" + (0x1000000 + (R < 255 ? (R < 1 ? 0 : R) : 255)*0x10000 + (G < 255 ? (G < 1 ? 0 : G) : 255)*0x100 + (B < 255 ? (B < 1 ? 0 : B) : 255)).toString(16).slice(1);
   };
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSyncAlt, faTwitter } from '@fortawesome/free-solid-svg-icons'; // Changed to use faTwitter
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Buttons = ({ fetchQuote, quote, author, textColor }) => (
   <div className="buttons">
     <a
       id="tweet-quote"
       className="btn tweet-button"
-      style={{ backgroundColor: 'black', color: textColor }} // Set background to black
+      style={{ backgroundColor: 'black', color: textColor }}
       href={`https://twitter.com/intent/tweet?text=${quote} - ${author}`}
       target="_blank"
       rel="noopener noreferrer"
