@@ -5,7 +5,6 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import QuoteBox from './QuoteBox';
 import './App.scss';
 
-// Add the font awesome icons to the library
 library.add(faSyncAlt, faTwitter);
 
 const colors = [

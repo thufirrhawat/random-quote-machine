@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+// Utility function to get a contrasting color
 const getContrastingColor = (color) => {
   const hex = color.replace('#', '');
   const r = parseInt(hex.substring(0, 2), 16);

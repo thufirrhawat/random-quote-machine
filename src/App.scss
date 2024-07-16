@@ -1,55 +1,52 @@
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
 }
 
-#quote-box {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
   max-width: 600px;
-  width: 90%;
-  margin: 20px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.quote-text {
+#text {
   font-size: 1.5rem;
 }
 
-.quote-author {
+#author {
   font-size: 1.2rem;
   text-align: right;
+  margin-top: 1rem;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.tweet-button {
-  font-size: 1.5rem;
+button,
+.btn {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (max-width: 768px) {
-  #quote-box {
-    max-width: 90%;
-  }
-
-  .quote-text {
-    font-size: 1.2rem;
-  }
-
-  .quote-author {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #quote-box {
-    max-width: 100%;
-  }
-
-  .quote-text {
-    font-size: 1rem;
-  }
-
-  .quote-author {
-    font-size: 0.8rem;
-  }
+button:hover,
+.btn:hover {
+  opacity: 0.8;
 }
