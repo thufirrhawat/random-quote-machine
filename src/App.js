@@ -28,22 +28,27 @@ function App() {
 
   const fetchQuote = async () => {
     try {
-      const response = await fetch('/api/qotd');
+      const response = await fetch('https://api.quotable.io/random');
+  
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
+  
       const data = await response.json();
-      setQuote(data.quote.body);
-      setAuthor(data.quote.author);
+      setQuote(data.content);
+      setAuthor(data.author);
   
       const newBgColor = getRandomColor();
       const newTextColor = getDarkerColor(newBgColor);
       setBgColor(newBgColor);
       setTextColor(newTextColor);
     } catch (error) {
-      console.error('Error fetching quote:', error);
+      console.error('Error fetching quote:', error.message);
     }
   };
+  
+  
+  
 
   const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * colors.length);
